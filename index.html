@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split Bill App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Split Bill App</h1>
+        <form id="split-bill-form">
+            <div class="your-food-container">
+                <div id="food-price-container">
+                    <div class="form-group">
+                        <label for="your-food-price-0">Your Food Price *</label>
+                        <input type="number" id="your-food-price-0" class="your-food-price" required>
+                    </div>
+                </div>
+                <button type="button" id="add-food-price">Add Another Food Price</button>
+            </div>
+            <div class="form-group">
+                <label for="total-price">Total Price *</label>
+                <input type="number" id="total-price" required>
+            </div>
+            <div class="form-group">
+                <label for="tax-percentage">Tax Percentage *</label>
+                <input type="number" id="tax-percentage" required>
+            </div>
+            <div class="form-group">
+                <label for="service-fee-percentage">Service Fee Percentage *</label>
+                <input type="number" id="service-fee-percentage" required>
+            </div>
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="result" class="result">
+            <h2>Your Split: Rp <span id="total-amount">0.00</span></h2>
+            <p id="breakdown"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
